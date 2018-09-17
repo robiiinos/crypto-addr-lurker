@@ -4,7 +4,7 @@ import config from '../config';
 const sock = zeromq.socket('sub');
 
 function connect() {
-  sock.connect(`${config.node.protocol}://${config.node.host}:${config.node.port}`);
+  sock.connect(`${config.cryptocurrency.zmq.protocol}://${config.cryptocurrency.zmq.host}:${config.cryptocurrency.zmq.port}`);
 }
 
 function suscribe() {

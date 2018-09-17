@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/robiiinos/crypto-addr-lurker#readme",
   "dependencies": {
+    "jayson": "^2.0.6",
     "zeromq": "^4.6.0"
   },
   "devDependencies": {
