@@ -1,0 +1,33 @@
+{
+  "name": "crypto-addr-lurker",
+  "version": "1.0.0",
+  "description": "Watch any address involved in transactions (IN or OUT) on a cryptocurrency network.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robiiinos/crypto-addr-lurker.git"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "jsonrpc"
+  ],
+  "author": "D. Robin <dyrda.robin@outlook.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robiiinos/crypto-addr-lurker/issues"
+  },
+  "homepage": "https://github.com/robiiinos/crypto-addr-lurker#readme",
+  "dependencies": {
+    "zeromq": "^4.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.4"
+  }
+}
