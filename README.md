@@ -9,6 +9,7 @@
 This tool is made using [zeromq.js](https://github.com/zeromq/zeromq.js) and works on NodeJS 8+.
 
 **crypto-addr-lurker** helps you watch your addresses on any blockchain (Bitcoin derivative) with ØMQ support.
+
 crypto-addr-lurker supports all major operating systems, including:
 
 * OS X/Darwin (x64)
