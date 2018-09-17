@@ -14,7 +14,7 @@ zeromq.onMessage((topic, message) => {
 
     const { vout } = transaction.vout;
     vout.forEach((output) => {
-      if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata') {
+      if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata' && output.scriptPubKey.type !== 'create') {
         config.addresses.forEach((address) => {
           if (output.scriptPubKey.addresses[0] === address) {
             // Send a Telegram notification?
