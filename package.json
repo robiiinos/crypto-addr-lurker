@@ -4,9 +4,15 @@
   "description": "Watch any address involved in transactions (IN or OUT) on a cryptocurrency network.",
   "main": "index.js",
   "scripts": {
+    "config": "cp config.sample.js config.js",
     "dev": "nodemon index.js --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "clean": "rm -rf build/ && mkdir build",
+    "test": "npm run config && npm run lint",
+    "lint": "eslint index.js config.sample.js ./src *.js",
+    "lint:fix": "eslint --fix index.js config.sample.js ./src *.js",
+    "compile": "babel --ignore node_modules,package.json,package-lock.json,LICENSE,README.md,config.sample.js,logs ./ -d ./build --copy-files",
+    "build": "npm run clean && npm run compile",
+    "start": "node ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +33,13 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^9.0.0",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
     "nodemon": "^1.18.4"
   }
 }

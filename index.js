@@ -5,5 +5,5 @@ zeromq.connect();
 zeromq.suscribe();
 
 zeromq.onMessage((topic, message) => {
-    console.log(`${topic.toString()} : ${message.toString('hex')}`);
+  console.log(`${topic.toString()} : ${message.toString('hex')}`);
 });
