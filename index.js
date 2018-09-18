@@ -13,7 +13,7 @@ zeromq.onMessage((topic, message) => {
   jayson.fetchTransaction(hash, (err, transaction) => {
     if (err) return logger.onError(err);
 
-    const { vout } = transaction.vout;
+    const { vout } = transaction;
     vout.forEach((output) => {
       if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata' && output.scriptPubKey.type !== 'create') {
         config.addresses.forEach((address) => {
