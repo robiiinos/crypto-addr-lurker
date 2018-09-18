@@ -15,5 +15,9 @@ export default {
   addresses: [
     '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa',
     '1XPTgDRhN8RFnzniWCddobD9iKZatrvH4'
-  ]
+  ],
+  dateFormat: 'MMMM Do YYYY, hh:mm A',
+  logs: {
+    dateFormat: 'MMMM Do YYYY, h:mm:ss'
+  }
 };

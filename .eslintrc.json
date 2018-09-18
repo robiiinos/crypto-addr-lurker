@@ -27,7 +27,6 @@
   "import/no-dynamic-require": "off",
   "consistent-return": "off",
   "array-callback-return": "off",
-  "no-param-reassign": "off",
-  "no-console": "off"
+  "no-param-reassign": "off"
   }
 }

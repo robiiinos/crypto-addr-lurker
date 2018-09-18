@@ -1,16 +1,17 @@
 import zeromq from './src/zeromq';
 import jayson from './src/jayson';
+import logger from './src/winston';
 import config from './config';
 
 zeromq.connect();
 zeromq.suscribe();
 
 zeromq.onMessage((topic, message) => {
-  console.log(`${topic.toString()} : ${message.toString('hex')}`);
+  logger.onInfo(`${topic.toString()} : ${message.toString('hex')}`);
 
   const hash = message.toString('hex');
   jayson.fetchTransaction(hash, (err, transaction) => {
-    if (err) console.log(err);
+    if (err) return logger.onError(err);
 
     const { vout } = transaction.vout;
     vout.forEach((output) => {
