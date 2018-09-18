@@ -65,7 +65,7 @@ With [Telegram](https://telegram.org/) for [MYNT cryptocurrency](https://www.myn
 
 [2] [Messaging API](https://github.com/Yoctol/messaging-apis) :
 
-1. Telegram
+1. ~~Telegram~~
 2. Viber
 3. WeChat
 4. LINE

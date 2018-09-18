@@ -1,5 +1,6 @@
 import zeromq from './src/zeromq';
 import jayson from './src/jayson';
+import Telegram from './src/providers/telegram';
 import logger from './src/winston';
 import config from './config';
 
@@ -18,7 +19,7 @@ zeromq.onMessage((topic, message) => {
       if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata' && output.scriptPubKey.type !== 'create') {
         config.addresses.forEach((address) => {
           if (output.scriptPubKey.addresses[0] === address) {
-            // Send a Telegram notification?
+            Telegram.sendMessage(address, output.value);
           }
         });
       }
