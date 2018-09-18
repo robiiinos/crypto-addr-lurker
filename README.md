@@ -20,6 +20,16 @@ Use **crypto-addr-lurker** and stay informed on both incoming and outcoming tran
 
 ## Usage
 
+### Node
+
+You'll need to have a local node set-up in order to allow **crypto-addr-lurker** to communicate with the blockchain.
+
+It needs to have a fully indexed database (-txindex=1) as well as ØMQ support (~~--disable-zmq~~) and a RPC Server (-server=1).
+
+You can check an example configuration [here](examples/bitcoin.conf).
+
+### Program
+
 > You need to first install all the required dependencies (dev dependencies included, they are needed to compile) for this project by simply running the following command.
 
 > Then you need to copy and fill the configuration file for address lurker. 
