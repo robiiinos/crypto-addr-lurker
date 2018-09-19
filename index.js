@@ -16,7 +16,7 @@ zeromq.onMessage((topic, message) => {
 
     const { vout } = transaction;
     vout.forEach((output) => {
-      if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata' && output.scriptPubKey.type !== 'create') {
+      if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata') {
         config.addresses
           .filter(address => address === output.scriptPubKey.addresses[0])
           .map((address) => {
