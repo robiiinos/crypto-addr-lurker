@@ -1,6 +1,7 @@
 export default {
   cryptocurrency: {
     name: 'Bitcoin',
+    blockExplorer: 'https://www.blockchain.com/en/btc/tx/',
     rpc: {
       host: '127.0.0.1',
       user: 'Ulysseys',
@@ -21,7 +22,7 @@ export default {
     telegram: {
       accessToken: '123456789:abcdefghijklmnopqrstuvwxyzABCDEFGHI',
       chatId: 123456789,
-      message: '<b>🤖 %currency% address lurker</b>\n<em>New %type% transaction.</em>\n\n<b>📝 Address :</b>\n<pre>%address%</pre>\n\n<b>💰 Amount :</b>\n<pre>%value% %currency%</pre>\n\n<em>Date : %date%</em>'
+      message: '<b>🤖 %currency% address lurker</b>\n<em>New %type% transaction.</em>\n\n<b>📝 Address :</b>\n<pre>%address%</pre>\n\n<b>💰 Amount :</b>\n<pre>%value% %currency%</pre>\n\nView on <a href="%explorer%%hash%">explorer</a>...\n<em>Date : %date%</em>'
     }
   },
   dateFormat: 'MMMM Do YYYY, hh:mm A',

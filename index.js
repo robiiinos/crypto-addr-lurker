@@ -32,7 +32,7 @@ zeromq.onMessage((topic, message) => {
                 config.addresses
                   .filter(address => address === data.scriptPubKey.addresses[0])
                   .map((address) => {
-                    Telegram.sendMessage(TX_OUT, address, data.value);
+                    Telegram.sendMessage(TX_OUT, address, data.value, transaction.hash);
                   });
               });
           });
@@ -46,7 +46,7 @@ zeromq.onMessage((topic, message) => {
           config.addresses
             .filter(address => address === output.scriptPubKey.addresses[0])
             .map((address) => {
-              Telegram.sendMessage(TX_IN, address, output.value);
+              Telegram.sendMessage(TX_IN, address, output.value, transaction.hash);
             });
         }
       });
