@@ -75,7 +75,7 @@ With [Telegram](https://telegram.org/) for [MYNT cryptocurrency](https://www.myn
 
 [2] [Messaging API](https://github.com/Yoctol/messaging-apis) :
 
-1. ~~Telegram~~ [(233b243)](233b243798e9a3450d524a702846fdc18da95b6b)
+1. ~~Telegram~~ [(233b243)](https://github.com/robiiinos/crypto-addr-lurker/commit/233b243798e9a3450d524a702846fdc18da95b6b)
 2. Viber
 3. WeChat
 4. LINE
@@ -85,7 +85,7 @@ With [Telegram](https://telegram.org/) for [MYNT cryptocurrency](https://www.myn
 
 [3] Notifications about dropped transactions with new transaction hash (see [**Limitations [1]**](#limitations)).
 
-[4] ~~Block explorer link with transaction hash (incoming and outgoing, in the message content).~~ [(34cbeb4)](34cbeb4ecfed9e918e47ef59ee8bf58018d7314d)
+[4] ~~Block explorer link with transaction hash (incoming and outgoing, in the message content).~~ [(34cbeb4)](https://github.com/robiiinos/crypto-addr-lurker/commit/34cbeb4ecfed9e918e47ef59ee8bf58018d7314d)
 
 [5] Option for notifications only when a transaction has been included in a block (+ block number in the message content).
 
