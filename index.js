@@ -14,15 +14,17 @@ zeromq.onMessage((topic, message) => {
   jayson.fetchTransaction(hash, (err, transaction) => {
     if (err) return logger.onError(err);
 
-    const { vout } = transaction;
-    vout.forEach((output) => {
-      if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata') {
-        config.addresses
-          .filter(address => address === output.scriptPubKey.addresses[0])
-          .map((address) => {
-            Telegram.sendMessage(address, output.value);
-          });
-      }
-    });
+    if (!transaction.confirmations) {
+      const { vout } = transaction;
+      vout.forEach((output) => {
+        if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata') {
+          config.addresses
+            .filter(address => address === output.scriptPubKey.addresses[0])
+            .map((address) => {
+              Telegram.sendMessage(address, output.value);
+            });
+        }
+      });
+    }
   });
 });
