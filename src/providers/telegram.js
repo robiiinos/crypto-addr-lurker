@@ -4,9 +4,10 @@ import config from '../../config';
 
 const client = TelegramClient.connect(config.providers.telegram.accessToken);
 
-function formatMessage(address, value) {
+function formatMessage(type, address, value) {
   const formattedMessage = config.providers.telegram.message
     .replace('%currency%', config.cryptocurrency.name)
+    .replace('%type%', type)
     .replace('%address%', address)
     .replace('%value%', value)
     .replace('%currency%', config.cryptocurrency.name)
@@ -15,8 +16,8 @@ function formatMessage(address, value) {
   return formattedMessage;
 }
 
-function sendMessage(address, value) {
-  client.sendMessage(config.providers.telegram.chatId, formatMessage(address, value), {
+function sendMessage(type, address, value) {
+  client.sendMessage(config.providers.telegram.chatId, formatMessage(type, address, value), {
     parse_mode: 'HTML',
     disable_web_page_preview: true,
     disable_notification: false
