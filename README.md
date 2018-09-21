@@ -59,7 +59,7 @@ npm run start
 
 With [Telegram](https://telegram.org/) for [MYNT cryptocurrency](https://www.myntcurrency.org/) :
 
-![Telegram notification example](https://i.imgur.com/X4hCwtV.png)
+![Telegram notification example](https://i.imgur.com/Yumzm7m.png)
 
 ## Limitations
 [1] BIP 125 of Bitcoin protocol introduces Replace-by-Fee, which make a transaction already broadcasted to the network replaceable. This could lead to multiple notifications on the app for an unconfirmed transaction (same output, but different transaction hash) to an address.
