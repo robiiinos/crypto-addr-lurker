@@ -32,7 +32,7 @@
     "jayson": "^2.1.1",
     "messaging-api-telegram": "^0.7.11",
     "moment": "^2.24.0",
-    "winston": "^3.1.0",
+    "winston": "^3.2.1",
     "zeromq": "^5.1.0"
   },
   "devDependencies": {
