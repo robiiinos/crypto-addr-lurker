@@ -44,6 +44,6 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.19.0"
   }
 }
