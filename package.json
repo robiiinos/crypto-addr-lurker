@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/robiiinos/crypto-addr-lurker#readme",
   "dependencies": {
-    "jayson": "^3.1.2",
+    "jayson": "^3.2.0",
     "messaging-api-telegram": "^0.8.2",
     "moment": "^2.24.0",
     "winston": "^3.2.1",
