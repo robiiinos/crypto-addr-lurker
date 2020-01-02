@@ -27,10 +27,10 @@ zeromq.onMessage((topic, message) => {
 
             const { vout } = previousTX;
             vout
-              .filter(data => data.n === input.vout)
+              .filter((data) => data.n === input.vout)
               .map((data) => {
                 config.addresses
-                  .filter(address => address === data.scriptPubKey.addresses[0])
+                  .filter((address) => address === data.scriptPubKey.addresses[0])
                   .map((address) => {
                     Telegram.sendMessage(TX_OUT, transaction.hash, address, data.value);
                   });
@@ -44,7 +44,7 @@ zeromq.onMessage((topic, message) => {
       vout.forEach((output) => {
         if (output.scriptPubKey.type !== 'nonstandard' && output.scriptPubKey.type !== 'nulldata') {
           config.addresses
-            .filter(address => address === output.scriptPubKey.addresses[0])
+            .filter((address) => address === output.scriptPubKey.addresses[0])
             .map((address) => {
               Telegram.sendMessage(TX_IN, transaction.hash, address, output.value);
             });
